@@ -8,9 +8,10 @@ jobs:
   update-gist:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Update gist
-        uses: zer0pwned/waka-box@master
+        with: 
+          repository: zer0pwned/waka-box
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: 87827a0e083e652c167800b5bed9f091
