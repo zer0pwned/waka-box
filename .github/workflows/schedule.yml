@@ -10,8 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Update gist
-        with: 
-          repository: zer0pwned/waka-box
+        run: npm ci
+      - name: Update gist
+        run: node ./index.js
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: 87827a0e083e652c167800b5bed9f091
